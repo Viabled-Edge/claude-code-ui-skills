@@ -5,7 +5,7 @@ A complete design system for Claude Code with 5 curated UI styles and 3 utility 
 ## Installation
 
 ```bash
-/plugin marketplace add aisandler/claude-code-ui-skills
+/plugin marketplace add Viabled-Edge/claude-code-ui-skills
 /plugin install soft-ui-system@claude-code-ui-skills
 ```
 
