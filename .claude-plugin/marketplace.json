@@ -1,0 +1,62 @@
+{
+  "name": "UI Skill System",
+  "description": "Complete design system skills for Claude Code - 5 UI styles + 3 utility modules",
+  "plugins": [
+    {
+      "name": "soft-ui-system",
+      "source": {
+        "type": "git",
+        "url": "skills/soft-ui-system"
+      }
+    },
+    {
+      "name": "sharp-ui",
+      "source": {
+        "type": "git",
+        "url": "skills/sharp-ui"
+      }
+    },
+    {
+      "name": "glass-ui-system",
+      "source": {
+        "type": "git",
+        "url": "skills/glass-ui-system"
+      }
+    },
+    {
+      "name": "glossy-ui-system",
+      "source": {
+        "type": "git",
+        "url": "skills/glossy-ui-system"
+      }
+    },
+    {
+      "name": "retro-ui-system",
+      "source": {
+        "type": "git",
+        "url": "skills/retro-ui-system"
+      }
+    },
+    {
+      "name": "layout-system",
+      "source": {
+        "type": "git",
+        "url": "skills/layout-system"
+      }
+    },
+    {
+      "name": "form-patterns",
+      "source": {
+        "type": "git",
+        "url": "skills/form-patterns"
+      }
+    },
+    {
+      "name": "motion-system",
+      "source": {
+        "type": "git",
+        "url": "skills/motion-system"
+      }
+    }
+  ]
+}

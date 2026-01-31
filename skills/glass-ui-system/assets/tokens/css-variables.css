@@ -1,0 +1,131 @@
+/**
+ * Glass UI - CSS Custom Properties
+ *
+ * Use these variables for non-Tailwind projects or CSS-in-JS solutions.
+ * Toggle theme with [data-theme="light"] on a parent element.
+ */
+
+:root {
+  /* === FROSTED VARIANT === */
+  --glass-frosted-bg: rgba(255, 255, 255, 0.1);
+  --glass-frosted-bg-hover: rgba(255, 255, 255, 0.15);
+  --glass-frosted-border: rgba(255, 255, 255, 0.2);
+  --glass-frosted-border-hover: rgba(255, 255, 255, 0.3);
+  --glass-frosted-blur: 20px;
+  --glass-frosted-blur-lg: 30px;
+
+  /* === CLEAR VARIANT === */
+  --glass-clear-bg: rgba(255, 255, 255, 0.5);
+  --glass-clear-bg-hover: rgba(255, 255, 255, 0.6);
+  --glass-clear-border: rgba(255, 255, 255, 0.4);
+  --glass-clear-border-hover: rgba(255, 255, 255, 0.5);
+  --glass-clear-blur: 8px;
+  --glass-clear-blur-lg: 12px;
+
+  /* === ACCENT COLORS === */
+  --glass-accent: #a78bfa;
+  --glass-accent-light: #c4b5fd;
+  --glass-accent-dark: #8b5cf6;
+  --glass-accent-glow: rgba(167, 139, 250, 0.3);
+  --glass-accent-glow-strong: rgba(167, 139, 250, 0.5);
+
+  /* === BORDER RADIUS === */
+  --glass-radius: 16px;
+  --glass-radius-lg: 20px;
+  --glass-radius-xl: 24px;
+  --glass-radius-full: 9999px;
+
+  /* === SHADOWS === */
+  --glass-shadow-glow: 0 0 30px -5px rgba(167, 139, 250, 0.3);
+  --glass-shadow-glow-lg: 0 0 50px -10px rgba(167, 139, 250, 0.4);
+  --glass-shadow-subtle: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --glass-shadow-elevated: 0 16px 48px rgba(0, 0, 0, 0.15);
+  --glass-shadow-border: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+
+  /* === TRANSITIONS === */
+  --glass-transition-duration: 200ms;
+  --glass-transition-duration-slow: 300ms;
+  --glass-transition-easing: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* === DARK THEME (default) === */
+  --glass-bg: #0f0f1a;
+  --glass-bg-gradient-from: #1a1033;
+  --glass-bg-gradient-to: #0f1a2e;
+  --glass-surface: #1a1a2e;
+  --glass-surface-elevated: #252540;
+  --glass-text: #ffffff;
+  --glass-text-muted: #a1a1aa;
+  --glass-text-dim: #71717a;
+}
+
+/* === LIGHT THEME === */
+[data-theme="light"] {
+  --glass-bg: #f8fafc;
+  --glass-bg-gradient-from: #e0e7ff;
+  --glass-bg-gradient-to: #fae8ff;
+  --glass-surface: #ffffff;
+  --glass-surface-elevated: #f1f5f9;
+  --glass-text: #0f172a;
+  --glass-text-muted: #64748b;
+  --glass-text-dim: #94a3b8;
+
+  /* Adjusted shadows for light theme */
+  --glass-shadow-subtle: 0 8px 32px rgba(0, 0, 0, 0.06);
+  --glass-shadow-elevated: 0 16px 48px rgba(0, 0, 0, 0.08);
+}
+
+/* === UTILITY CLASSES === */
+
+.glass-frosted {
+  background: var(--glass-frosted-bg);
+  backdrop-filter: blur(var(--glass-frosted-blur));
+  -webkit-backdrop-filter: blur(var(--glass-frosted-blur));
+  border: 1px solid var(--glass-frosted-border);
+  border-radius: var(--glass-radius);
+}
+
+.glass-clear {
+  background: var(--glass-clear-bg);
+  backdrop-filter: blur(var(--glass-clear-blur));
+  -webkit-backdrop-filter: blur(var(--glass-clear-blur));
+  border: 1px solid var(--glass-clear-border);
+  border-radius: var(--glass-radius);
+}
+
+.glass-card {
+  padding: 1.5rem;
+  transition: all var(--glass-transition-duration) var(--glass-transition-easing);
+}
+
+.glass-card:hover {
+  border-color: var(--glass-frosted-border-hover);
+}
+
+.glass-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--glass-radius-full);
+  font-weight: 500;
+  transition: all var(--glass-transition-duration) var(--glass-transition-easing);
+}
+
+.glass-button-primary {
+  background: var(--glass-accent);
+  color: white;
+}
+
+.glass-button-primary:hover {
+  box-shadow: var(--glass-shadow-glow);
+}
+
+.glass-glow {
+  box-shadow: var(--glass-shadow-glow);
+}
+
+.glass-glow-pulse {
+  animation: glass-glow-pulse 2s ease-in-out infinite;
+}
+
+@keyframes glass-glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px -5px rgba(167, 139, 250, 0.2); }
+  50% { box-shadow: 0 0 30px -5px rgba(167, 139, 250, 0.4); }
+}
